@@ -31,7 +31,7 @@ app.use(rateLimiter);
 // });
 
 app.use("/api/notes", notesRoutes);
-
+  
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
@@ -45,3 +45,4 @@ connectDB().then(() => {
     console.log("Server started on PORT:", PORT);
   });
 });
+  
